@@ -1,0 +1,634 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:conferences="http://www.filkom.ub.ac.id/conferences#">
+    <Ontology rdf:about="http://www.filkom.ub.ac.id/conferences"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#conferences -->
+
+    <ObjectProperty rdf:about="http://www.filkom.ub.ac.id/conferences#conferences">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#hasInvitedSpeaker -->
+
+    <ObjectProperty rdf:about="http://www.filkom.ub.ac.id/conferences#hasInvitedSpeaker">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.filkom.ub.ac.id/conferences#Conference"/>
+        <rdfs:range rdf:resource="http://www.filkom.ub.ac.id/conferences#Invited_Speaker"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#hasKeynoteSpeaker -->
+
+    <ObjectProperty rdf:about="http://www.filkom.ub.ac.id/conferences#hasKeynoteSpeaker">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.filkom.ub.ac.id/conferences#Conference"/>
+        <rdfs:range rdf:resource="http://www.filkom.ub.ac.id/conferences#Keynote_Speaker"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#includes -->
+
+    <ObjectProperty rdf:about="http://www.filkom.ub.ac.id/conferences#includes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#isCityOf -->
+
+    <ObjectProperty rdf:about="http://www.filkom.ub.ac.id/conferences#isCityOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.filkom.ub.ac.id/conferences#City"/>
+        <rdfs:range rdf:resource="http://www.filkom.ub.ac.id/conferences#Conference"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#isEndDate -->
+
+    <ObjectProperty rdf:about="http://www.filkom.ub.ac.id/conferences#isEndDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.filkom.ub.ac.id/conferences#End_Date"/>
+        <rdfs:range rdf:resource="http://www.filkom.ub.ac.id/conferences#Conference"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#isIndexerOf -->
+
+    <ObjectProperty rdf:about="http://www.filkom.ub.ac.id/conferences#isIndexerOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.filkom.ub.ac.id/conferences#Indexer"/>
+        <rdfs:range rdf:resource="http://www.filkom.ub.ac.id/conferences#Conference"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#isPaperDue -->
+
+    <ObjectProperty rdf:about="http://www.filkom.ub.ac.id/conferences#isPaperDue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.filkom.ub.ac.id/conferences#Paper_Submission_Deadline"/>
+        <rdfs:range rdf:resource="http://www.filkom.ub.ac.id/conferences#Conference"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#isPlaceOf -->
+
+    <ObjectProperty rdf:about="http://www.filkom.ub.ac.id/conferences#isPlaceOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.filkom.ub.ac.id/conferences#Place"/>
+        <rdfs:range rdf:resource="http://www.filkom.ub.ac.id/conferences#Conference"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#isRegionOf -->
+
+    <ObjectProperty rdf:about="http://www.filkom.ub.ac.id/conferences#isRegionOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.filkom.ub.ac.id/conferences#Region"/>
+        <rdfs:range rdf:resource="http://www.filkom.ub.ac.id/conferences#Conference"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#isRegistrationDue -->
+
+    <ObjectProperty rdf:about="http://www.filkom.ub.ac.id/conferences#isRegistrationDue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.filkom.ub.ac.id/conferences#Registration_Deadline"/>
+        <rdfs:range rdf:resource="http://www.filkom.ub.ac.id/conferences#Conference"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#isStartDate -->
+
+    <ObjectProperty rdf:about="http://www.filkom.ub.ac.id/conferences#isStartDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.filkom.ub.ac.id/conferences#Start_Date"/>
+        <rdfs:range rdf:resource="http://www.filkom.ub.ac.id/conferences#Conference"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#isTopicOf -->
+
+    <ObjectProperty rdf:about="http://www.filkom.ub.ac.id/conferences#isTopicOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.filkom.ub.ac.id/conferences#Topic_of_Interest"/>
+        <rdfs:range rdf:resource="http://www.filkom.ub.ac.id/conferences#Conference"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#name -->
+
+    <DatatypeProperty rdf:about="http://www.filkom.ub.ac.id/conferences#name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#Calender -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#Calender"/>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#City -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#City">
+        <rdfs:subClassOf rdf:resource="http://www.filkom.ub.ac.id/conferences#Place"/>
+    </Class>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#Conference -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#Conference"/>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#Deadline -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#Deadline"/>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#End_Date -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#End_Date">
+        <rdfs:subClassOf rdf:resource="http://www.filkom.ub.ac.id/conferences#Calender"/>
+    </Class>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#Indexer -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#Indexer"/>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#Invited_Speaker -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#Invited_Speaker">
+        <rdfs:subClassOf rdf:resource="http://www.filkom.ub.ac.id/conferences#Speaker"/>
+    </Class>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#Keynote_Speaker -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#Keynote_Speaker">
+        <rdfs:subClassOf rdf:resource="http://www.filkom.ub.ac.id/conferences#Speaker"/>
+    </Class>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#Paper_Submission_Deadline -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#Paper_Submission_Deadline">
+        <rdfs:subClassOf rdf:resource="http://www.filkom.ub.ac.id/conferences#Deadline"/>
+    </Class>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#Place -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#Place"/>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#Region -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#Region">
+        <rdfs:subClassOf rdf:resource="http://www.filkom.ub.ac.id/conferences#Place"/>
+    </Class>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#Registration_Deadline -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#Registration_Deadline">
+        <rdfs:subClassOf rdf:resource="http://www.filkom.ub.ac.id/conferences#Deadline"/>
+    </Class>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#Speaker -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#Speaker"/>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#Start_Date -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#Start_Date">
+        <rdfs:subClassOf rdf:resource="http://www.filkom.ub.ac.id/conferences#Calender"/>
+    </Class>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#Topic -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#Topic"/>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#Topic_of_Interest -->
+
+    <Class rdf:about="http://www.filkom.ub.ac.id/conferences#Topic_of_Interest">
+        <rdfs:subClassOf rdf:resource="http://www.filkom.ub.ac.id/conferences#Topic"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#atmosphere -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#atmosphere">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Topic_of_Interest"/>
+        <conferences:isTopicOf rdf:resource="http://www.filkom.ub.ac.id/conferences#isyg_2018"/>
+        <conferences:name>atmosphere</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#august_03_2018 -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#august_03_2018">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Paper_Submission_Deadline"/>
+        <conferences:isPaperDue rdf:resource="http://www.filkom.ub.ac.id/conferences#isyg_2018"/>
+        <conferences:isPaperDue rdf:resource="http://www.filkom.ub.ac.id/conferences#sentrin_2018"/>
+        <conferences:isPaperDue rdf:resource="http://www.filkom.ub.ac.id/conferences#siet_2018"/>
+        <conferences:name>Agustus, 03 2018</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#beno_kunto_pradekso -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#beno_kunto_pradekso">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Keynote_Speaker"/>
+        <conferences:name>Ir. Beno Kunto Pradekso, M.Sc</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#cryosphere -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#cryosphere">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Topic_of_Interest"/>
+        <conferences:isTopicOf rdf:resource="http://www.filkom.ub.ac.id/conferences#isyg_2018"/>
+        <conferences:name>Cryosphere</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#data_analysis_method -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#data_analysis_method">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Topic_of_Interest"/>
+        <conferences:isTopicOf rdf:resource="http://www.filkom.ub.ac.id/conferences#isyg_2018"/>
+        <conferences:name>Data Analysis Method</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#data_management_and_education -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#data_management_and_education">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Topic_of_Interest"/>
+        <conferences:isTopicOf rdf:resource="http://www.filkom.ub.ac.id/conferences#isyg_2018"/>
+        <conferences:name>Data Management and Education</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#domain_specific_frameworks_and_applications -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#domain_specific_frameworks_and_applications">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Topic_of_Interest"/>
+        <conferences:isTopicOf rdf:resource="http://www.filkom.ub.ac.id/conferences#sentrin_2018"/>
+        <conferences:isTopicOf rdf:resource="http://www.filkom.ub.ac.id/conferences#siet_2018"/>
+        <conferences:name>Domain Specific Framework and Aplication</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#filkom_ub -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#filkom_ub">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Place"/>
+        <conferences:isPlaceOf rdf:resource="http://www.filkom.ub.ac.id/conferences#isyg_2018"/>
+        <conferences:isPlaceOf rdf:resource="http://www.filkom.ub.ac.id/conferences#sentrin_2018"/>
+        <conferences:isPlaceOf rdf:resource="http://www.filkom.ub.ac.id/conferences#siet_2018"/>
+        <conferences:name>Fakultas Ilmu Komputer</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#herman_tolle -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#herman_tolle">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Invited_Speaker"/>
+        <conferences:name>Dr. Eng. Herman Tolle</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#ieeexplore_indexing -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#ieeexplore_indexing">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Indexer"/>
+        <conferences:isIndexerOf rdf:resource="http://www.filkom.ub.ac.id/conferences#isyg_2018"/>
+        <conferences:isIndexerOf rdf:resource="http://www.filkom.ub.ac.id/conferences#siet_2018"/>
+        <conferences:name>ieee</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#indonesia -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#indonesia">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Region"/>
+        <conferences:isRegionOf rdf:resource="http://www.filkom.ub.ac.id/conferences#isyg_2018"/>
+        <conferences:isRegionOf rdf:resource="http://www.filkom.ub.ac.id/conferences#sentrin_2018"/>
+        <conferences:isRegionOf rdf:resource="http://www.filkom.ub.ac.id/conferences#siet_2018"/>
+        <conferences:name>Indonesia</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#isyg_2018 -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#isyg_2018">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Conference"/>
+        <conferences:hasInvitedSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#herman_tolle"/>
+        <conferences:hasInvitedSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#md_atiqur_rahman_ahad"/>
+        <conferences:hasInvitedSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#norman_naseer"/>
+        <conferences:hasInvitedSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#worapan_kusakunniran"/>
+        <conferences:hasKeynoteSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#beno_kunto_pradekso"/>
+        <conferences:hasKeynoteSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#shuji_hashimoto"/>
+        <conferences:name>International Symposium On Geoinformatics 2018</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#jtiik_indexing -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#jtiik_indexing">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Indexer"/>
+        <conferences:isIndexerOf rdf:resource="http://www.filkom.ub.ac.id/conferences#sentrin_2018"/>
+        <conferences:name>Jtiik</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#land -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#land">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Topic_of_Interest"/>
+        <conferences:isTopicOf rdf:resource="http://www.filkom.ub.ac.id/conferences#isyg_2018"/>
+        <conferences:name>Land</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#malang -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#malang">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#City"/>
+        <conferences:isCityOf rdf:resource="http://www.filkom.ub.ac.id/conferences#isyg_2018"/>
+        <conferences:isCityOf rdf:resource="http://www.filkom.ub.ac.id/conferences#sentrin_2018"/>
+        <conferences:isCityOf rdf:resource="http://www.filkom.ub.ac.id/conferences#siet_2018"/>
+        <conferences:name>Kota Malang</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#md_atiqur_rahman_ahad -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#md_atiqur_rahman_ahad">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Invited_Speaker"/>
+        <conferences:name>Prof. MD. Atiqur Rahman Ahad</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#missions_sensors_and_calibration -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#missions_sensors_and_calibration">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Topic_of_Interest"/>
+        <conferences:isTopicOf rdf:resource="http://www.filkom.ub.ac.id/conferences#isyg_2018"/>
+        <conferences:name>Missions Sensors and Calibration</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#models_methods_and_techniques -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#models_methods_and_techniques">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Topic_of_Interest"/>
+        <conferences:isTopicOf rdf:resource="http://www.filkom.ub.ac.id/conferences#sentrin_2018"/>
+        <conferences:isTopicOf rdf:resource="http://www.filkom.ub.ac.id/conferences#siet_2018"/>
+        <conferences:name>Models Methods and Techniques</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#norman_naseer -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#norman_naseer">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Invited_Speaker"/>
+        <conferences:hasKeynoteSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#shuji_hashimoto"/>
+        <conferences:name>Engr. Dr. Noman Naseer</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#november_10_2018 -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#november_10_2018">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Start_Date"/>
+        <conferences:isStartDate rdf:resource="http://www.filkom.ub.ac.id/conferences#isyg_2018"/>
+        <conferences:isStartDate rdf:resource="http://www.filkom.ub.ac.id/conferences#sentrin_2018"/>
+        <conferences:isStartDate rdf:resource="http://www.filkom.ub.ac.id/conferences#siet_2018"/>
+        <conferences:name>November,10 2018</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#november_12_2018 -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#november_12_2018">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#End_Date"/>
+        <conferences:isEndDate rdf:resource="http://www.filkom.ub.ac.id/conferences#isyg_2018"/>
+        <conferences:isEndDate rdf:resource="http://www.filkom.ub.ac.id/conferences#sentrin_2018"/>
+        <conferences:isEndDate rdf:resource="http://www.filkom.ub.ac.id/conferences#siet_2018"/>
+        <conferences:name>November, 12 2018</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#oceans -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#oceans">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Topic_of_Interest"/>
+        <conferences:isTopicOf rdf:resource="http://www.filkom.ub.ac.id/conferences#isyg_2018"/>
+        <conferences:name>Oceans</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#october_30_2018 -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#october_30_2018">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Registration_Deadline"/>
+        <conferences:isRegistrationDue rdf:resource="http://www.filkom.ub.ac.id/conferences#isyg_2018"/>
+        <conferences:isRegistrationDue rdf:resource="http://www.filkom.ub.ac.id/conferences#sentrin_2018"/>
+        <conferences:isRegistrationDue rdf:resource="http://www.filkom.ub.ac.id/conferences#siet_2018"/>
+        <conferences:name>Oktober, 30 2018</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#scopus_indexing -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#scopus_indexing">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Indexer"/>
+        <conferences:isIndexerOf rdf:resource="http://www.filkom.ub.ac.id/conferences#siet_2018"/>
+        <conferences:name>Scopus</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#sentrin_2018 -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#sentrin_2018">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Conference"/>
+        <conferences:hasInvitedSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#herman_tolle"/>
+        <conferences:hasInvitedSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#md_atiqur_rahman_ahad"/>
+        <conferences:hasInvitedSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#norman_naseer"/>
+        <conferences:hasInvitedSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#worapan_kusakunniran"/>
+        <conferences:hasKeynoteSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#beno_kunto_pradekso"/>
+        <conferences:hasKeynoteSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#shuji_hashimoto"/>
+        <conferences:name>Seminar Nasional Teknologi dan Rekayasa Informasi 2018</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#shuji_hashimoto -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#shuji_hashimoto">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Keynote_Speaker"/>
+        <conferences:name>Prof. Shuji Hashimoto</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#siet_2018 -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#siet_2018">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Conference"/>
+        <conferences:hasInvitedSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#herman_tolle"/>
+        <conferences:hasInvitedSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#md_atiqur_rahman_ahad"/>
+        <conferences:hasInvitedSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#norman_naseer"/>
+        <conferences:hasInvitedSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#worapan_kusakunniran"/>
+        <conferences:hasKeynoteSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#beno_kunto_pradekso"/>
+        <conferences:hasKeynoteSpeaker rdf:resource="http://www.filkom.ub.ac.id/conferences#shuji_hashimoto"/>
+        <conferences:name>Sustainable Information Engineering and Technology</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#smart_systems -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#smart_systems">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Topic_of_Interest"/>
+        <conferences:isTopicOf rdf:resource="http://www.filkom.ub.ac.id/conferences#sentrin_2018"/>
+        <conferences:isTopicOf rdf:resource="http://www.filkom.ub.ac.id/conferences#siet_2018"/>
+        <conferences:name>Smart Systems</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#technology_enhanced-learning -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#technology_enhanced-learning">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Topic_of_Interest"/>
+        <conferences:isTopicOf rdf:resource="http://www.filkom.ub.ac.id/conferences#sentrin_2018"/>
+        <conferences:name>Technology Enhanced Learning</conferences:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.filkom.ub.ac.id/conferences#worapan_kusakunniran -->
+
+    <NamedIndividual rdf:about="http://www.filkom.ub.ac.id/conferences#worapan_kusakunniran">
+        <rdf:type rdf:resource="http://www.filkom.ub.ac.id/conferences#Invited_Speaker"/>
+        <conferences:name>Worapan Kusakunniran, Dr.</conferences:name>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
